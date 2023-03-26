@@ -16,11 +16,19 @@
 
   1、Asm2Vec（S&P）：用于汇编代码语法和控制流图。该模型学习标记之间潜在的词法语义，并将汇编函数表示为集合语义的内部加权混合。学习过程不需要任何关于程序集代码的先验知识，例如编译器优化设置或程序集函数之间的正确映射。它只需要汇编代码函数作为输入。
   
-  2、Loki(Usenix Security 2022):混淆方式有符号执行、污点分析或程序合成，以往工作只关注其中一种，Loki对所有已知的自动去混淆攻击具有弹性。
+  2、布尔混合运算表达式（Predicting the Resilience of Obfuscated Code Against Symbolic Execution Attacks via Machine Learning Usenix Security 2017）它提供了一个以复杂方式编码任意算术公式的模型。表达式在一个不容易简化的域中表示，有效地隐藏了实际的语义操作。
   
-  3、布尔混合运算表达式（Predicting the Resilience of Obfuscated Code Against Symbolic Execution Attacks via Machine Learning Usenix Security 2017）
+  3、Loki(Usenix Security 2022):提出了一种通用方法来合成各种各样的、正式验证的任意复杂性的混合布尔算术(MBA)表达式
   
-## 三、小知识点
   
-  1、死代码消除就可以简化50%的汇编指令数量
-  2、
+  
+  4、
+  
+## 三、去混淆方法
+  
+  1、MBA-blast（Usenix Security 2021）
+
+## 四、小知识点
+  
+    1、死代码消除就可以简化50%的汇编指令数量
+    2、
