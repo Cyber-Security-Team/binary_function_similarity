@@ -13,14 +13,12 @@
   将需要混淆的代码从原始的指令集体系结构(ISA)转换为自定义的指令集体系结构，并将解释器与模拟新ISA的程序捆绑在一起，这有效地打破了任何不熟悉新架构的分析工具，目前最先进的商用工具THEMIDA和VMPROTECT都是基于此做的。
   
 ## 二、代码混淆相关论文
-
-  1、Asm2Vec（S&P）：用于汇编代码语法和控制流图。该模型学习标记之间潜在的词法语义，并将汇编函数表示为集合语义的内部加权混合。学习过程不需要任何关于程序集代码的先验知识，例如编译器优化设置或程序集函数之间的正确映射。它只需要汇编代码函数作为输入。
   
-  2、布尔混合运算表达式（MBA）（Obfuscation with Mixed Boolean-Arithmetic Expressions : reconstruction, analysis and simplification tools）它提供了一个以复杂方式编码任意算术公式的模型，把算术运算（+，-，*，/ ）和位运算（&，|，~）混合在一起用以隐藏原本表达式。
+  1、布尔混合运算表达式（MBA）（Obfuscation with Mixed Boolean-Arithmetic Expressions : reconstruction, analysis and simplification tools）它提供了一个以复杂方式编码任意算术公式的模型，把算术运算（+，-，*，/ ）和位运算（&，|，~）混合在一起用以隐藏原本表达式。
   
-  3、Loki(Usenix Security 2022):提出了一种通用方法来合成各种各样的、正式验证的任意复杂性的混合布尔算术(MBA)表达式。
+  2、Loki(Usenix Security 2022):提出了一种通用方法来合成各种各样的、正式验证的任意复杂性的混合布尔算术(MBA)表达式。
   
-  4、Code Obfuscation for WebAssembly 
+  3、Code Obfuscation for WebAssembly（CCS 2022）Wasm是在浏览器中运行的低级字节码，能够在浏览器中以接近本机的速度执行程序。它接收一个C/c++/Rust源文件，并输出一个Wasm模块。然后在浏览器中使用JavaScript实例化这个Wasm模块。一旦实例化，模块中保存的机器指令将在JS堆栈机器中运行，将Wasm模块的指令转换为二进制并在浏览器中执行。
   
 ## 三、去混淆方法
   
@@ -37,3 +35,9 @@
     3、权限管理（保护加密密钥和协议等关键信息）
     
     4、个人或敏感数据保护（保护数据或者保护处理这些数据的协议）
+    
+## 五、混淆分类
+
+    1、控制流混淆和数据混淆
+    
+    2、
