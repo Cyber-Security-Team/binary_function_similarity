@@ -14,9 +14,9 @@
   
 ## 二、代码混淆相关论文
   
-  1、布尔混合运算表达式（MBA）（Obfuscation with Mixed Boolean-Arithmetic Expressions : reconstruction, analysis and simplification tools）它提供了一个以复杂方式编码任意算术公式的模型，把算术运算（+，-，*，/ ）和位运算（&，|，~）混合在一起用以隐藏原本表达式。
+  1、混合布尔算数表达式（MBA）（Obfuscation with Mixed Boolean-Arithmetic Expressions : reconstruction, analysis and simplification tools）它提供了一个以复杂方式编码任意算术公式的模型，把算术运算（+，-，*，/ ）和位运算（&，|，~）混合在一起用以隐藏原本表达式。
   
-  2、Loki(Usenix Security 2022):提出了一种通用方法来合成各种各样的、正式验证的任意复杂性的混合布尔算术(MBA)表达式。
+  2、Loki(Usenix Security 2022):提出了一种通用方法来合成各种各样的、正式验证的任意复杂性的混合布尔算术(MBA)表达式。将对于程序合成的的去混淆检测方式成功率降低到19%，MBA-blast可以简化很先进的tigress约67%，但是只能简化Loli 0.5%。tigress是把16个MBA
   
   3、Code Obfuscation for WebAssembly（CCS 2022）Wasm是在浏览器中运行的低级字节码，能够在浏览器中以接近本机的速度执行程序。它接收一个C/c++/Rust源文件，并输出一个Wasm模块。然后在浏览器中使用JavaScript实例化这个Wasm模块。一旦实例化，模块中保存的机器指令将在JS堆栈机器中运行，将Wasm模块的指令转换为二进制并在浏览器中执行。
   
@@ -36,8 +36,9 @@
     
     4、个人或敏感数据保护（保护数据或者保护处理这些数据的协议）
     
-## 五、混淆分类
+## 五、可以做的点
 
-    1、控制流混淆和数据混淆
+    1、复现目前的混淆技术或者去混淆技术，写成综述
     
-    2、
+    2、在新领域WebAssembly做混淆或者去混淆方法的提出
+    
