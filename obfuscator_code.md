@@ -16,19 +16,24 @@
 
   1、Asm2Vec（S&P）：用于汇编代码语法和控制流图。该模型学习标记之间潜在的词法语义，并将汇编函数表示为集合语义的内部加权混合。学习过程不需要任何关于程序集代码的先验知识，例如编译器优化设置或程序集函数之间的正确映射。它只需要汇编代码函数作为输入。
   
-  2、布尔混合运算表达式（Predicting the Resilience of Obfuscated Code Against Symbolic Execution Attacks via Machine Learning Usenix Security 2017）它提供了一个以复杂方式编码任意算术公式的模型。表达式在一个不容易简化的域中表示，有效地隐藏了实际的语义操作。
+  2、布尔混合运算表达式（MBA）（Obfuscation with Mixed Boolean-Arithmetic Expressions : reconstruction, analysis and simplification tools）它提供了一个以复杂方式编码任意算术公式的模型，把算术运算（+，-，*，/ ）和位运算（&，|，~）混合在一起用以隐藏原本表达式。
   
-  3、Loki(Usenix Security 2022):提出了一种通用方法来合成各种各样的、正式验证的任意复杂性的混合布尔算术(MBA)表达式
+  3、Loki(Usenix Security 2022):提出了一种通用方法来合成各种各样的、正式验证的任意复杂性的混合布尔算术(MBA)表达式。
   
-  
-  
-  4、
+  4、Code Obfuscation for WebAssembly 
   
 ## 三、去混淆方法
   
-  1、MBA-blast（Usenix Security 2021）
-
-## 四、小知识点
+  1、MBA-blast（Usenix Security 2021）将所有按位的表达式转换为1位空间上的特定MBA形式，然后执行算术约简，极大地提高了简化效率。
   
-    1、死代码消除就可以简化50%的汇编指令数量
-    2、
+  2、
+
+## 四、混淆的应用场景
+  
+    1、恶意软件
+    
+    2、知识产权保护
+    
+    3、权限管理（保护加密密钥和协议等关键信息）
+    
+    4、个人或敏感数据保护（保护数据或者保护处理这些数据的协议）
