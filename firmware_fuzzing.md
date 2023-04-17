@@ -22,5 +22,5 @@
     1、IoTFuzzer：IOTFUZZER: Discovering Memory Corruptions in IoT Through App-based Fuzzing(直接模糊物联网固件)直接在实际设备上执行黑盒模糊处理，吞吐量低。
     2、Avatar: A Framework to Support Dynamic Security Analysis of Embedded Systems’ Firmwares：构建QEMU和真实硬件组成的混合执行环境，Avatar充当模拟器与真实硬件之间的软件代理，这允许其利用模拟器来执行和分析指令，同时将I/O操作引导到物理硬件。
     3、Firmadyne：(全系统仿真)：在系统模式QEMU中添加了对物联网固件的硬件支持，为ARM和MIPS架构提供支持。通过修改内核和驱动程序来完全模拟系统，以处理由于缺乏实际硬件而导致的物联网异常。
-    4、HALucinator: Firmware Re-hosting Through Abstraction Layer Emulation：提供HAL功能的高级替代品（称为“HLE”），使硬件与固件脱钩，
+    4、HALucinator: Firmware Re-hosting Through Abstraction Layer Emulation：提供HAL功能的高级替代品，使硬件与固件脱钩，在仿真器中实现HAL的库函数，然后在HALucnator中加入AFL，就可以进行fuzzing。
 结论：吞吐量是影响模糊效果的关键因素。从直接模糊物联网设备，软硬件仿真相结合的混合解决方案，到全系统仿真，全系统仿真有着最高的吞吐量，但是全系统仿真目前的技术模拟设备不够准确，不能模拟需要复杂外设的固件，并且往往只能在单一架构进行。代码覆盖率有另外一部分人在做，好像和仿真与否关系不大，仿真和固件上的fuzzing主要影响的是吞吐率。
