@@ -18,4 +18,4 @@ run_target会记录执行过程中的分支信息；随后，fuzzer便可以根�
 
 ### 复现结果
 ![image](https://github.com/Cyber-Security-Team/binary_function_similarity/blob/main/image/%E7%BD%91%E7%BB%9C%E6%91%84%E5%83%8F%E5%A4%B4%E5%9B%BA%E4%BB%B6.png)
-![image](https://github.com/Cyber-Security-Team/binary_function_similarity/blob/main/image/RV130W%20Wireless-N%20%E5%A4%9A%E5%8A%9F%E8%83%BD%20VPN%20%E8%B7%AF%E7%94%B1%E5%99%A8%E5%9B%BA%E4%BB%B6josnparse.png)
+![image](https://github.com/Cyber-Security-Team/binary_function_similarity/blob/main/image/RV130.png)
