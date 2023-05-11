@@ -2,15 +2,15 @@
 AFL++ 是 Google 的 AFL 的高级分支 - 更快、更多、更好的突变，包含了源代码fuzzing和闭源的二进制fuzzing，对于固件（二进制）的fuzzing，仿真模式分为了QEMU模式、nyx模式、unicore模式。
 
 ### AFL整体实现框架：
-
+![image](https://github.com/Cyber-Security-Team/binary_function_similarity/blob/main/image/AFL%E6%95%B4%E4%BD%93%E6%B5%81%E7%A8%8B%E5%9B%BE.jpg)
 ### AFL++fuzzing部分的内部实现细节：
 
 #### 1、插桩
-1）、对闭源二进制程序采用的是静态插桩，QEMU利用LLVM编译器将二进制程序转换为LLVM IR中间语言，然后在识别到的基本块的开头进行插桩，插桩后再次编译为二进制程序运行。
+1）、对闭源二进制程序采用的是静态插桩，QEMU利用LLVM编译器将二进制程序转换为LLVM IR中间语言，然后遍历每个基本块在合适的位置（函数获取最合适的位置）插桩，插桩后再次编译为二进制程序运行,运行中BB执行一次，就将其值＋1，计数结果保存在后面的桶中。
 
 #### 2、fork_server：
 forkserver的好处：
-其基本思路是：fuzzer并不负责fork子进程，而是与这个fork server通信，并由fork server通过复制复制父进程的方式创建子进程，实现共享进程以及共享内存。这样设计的最大好处，就是不需要调用execve()，从而节省了载入目标文件和库、解析符号地址等重复性工作。
+其基本思路是：fuzzer并不负责fork子进程，而是与这个fork server通信，并由fork server通过复制父进程的方式创建子进程，实现共享进程以及共享内存。这样设计的最大好处，就是不需要执行execve()函数的多次调用，以往从而节省了载入目标文件和库、解析符号地址等重复性工作。
 
 ![image](https://github.com/Cyber-Security-Team/binary_function_similarity/blob/main/image/fork_server_1.png)    
 ![image](https://github.com/Cyber-Security-Team/binary_function_similarity/blob/main/image/fork_server_2.png)
