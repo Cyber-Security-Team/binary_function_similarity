@@ -2,7 +2,7 @@
 AFL++ 是 Google 的 AFL 的高级分支 - 更快、更多、更好的突变，包含了源代码fuzzing和闭源的二进制fuzzing，对于固件（二进制）的fuzzing，仿真模式分为了QEMU模式、nyx模式、unicore模式。
 
 ### AFL整体实现框架：
-![image](https://github.com/Cyber-Security-Team/binary_function_similarity/blob/main/image/AFL%E6%95%B4%E4%BD%93%E6%B5%81%E7%A8%8B%E5%9B%BE.jpg)
+![image](https://github.com/Cyber-Security-Team/binary_function_similarity/blob/main/image/AFL%E6%B5%81%E7%A8%8B%E5%9B%BE.png)
 
 ### AFL++fuzzing部分的内部实现细节：
 
@@ -11,7 +11,7 @@ AFL++ 是 Google 的 AFL 的高级分支 - 更快、更多、更好的突变，�
 
 #### 2、fork_server：
 forkserver的好处：
-其基本思路是：fuzzer并不负责fork子进程，而是与这个fork server通信，并由fork server通过复制父进程的方式创建子进程，实现共享进程以及共享内存。这样设计的最大好处，就是不需要执行execve()函数的多次调用，以往从而节省了载入目标文件和库、解析符号地址等重复性工作。
+其基本思路是：fuzzer并不负责fork子进程，而是与这个fork server通信，并由fork server通过复制父进程的方式创建子进程，实现共享进程以及共享内存。按照原本的做法，fuzzer每次fork一个子进程，都要execve()函数启动目标程序来代替自己，来重新启动此程序。这样设计的最大好处，就是不需要执行execve()函数的多次调用，以往从而节省了载入目标二进制程序和库、解析符号地址等重复性工作，因为是直接从forkserver复制过来的，程序本身就是打开的，各种库也已经加载好了。所以会节省时间。并且这些fuzzer之间共享测试用例和其他状态信息，从而就知道哪些用例被测试了，避免重复工作。
 
 ![image](https://github.com/Cyber-Security-Team/binary_function_similarity/blob/main/image/fork_server_1.png)    
 ![image](https://github.com/Cyber-Security-Team/binary_function_similarity/blob/main/image/fork_server_2.png)
