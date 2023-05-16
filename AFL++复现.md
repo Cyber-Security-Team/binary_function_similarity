@@ -15,7 +15,7 @@ forkserver的好处：
 
 ![image](https://github.com/Cyber-Security-Team/binary_function_similarity/blob/main/image/fork_server_1.png)    
 ![image](https://github.com/Cyber-Security-Team/binary_function_similarity/blob/main/image/fork_server_2.png)
-
+![image](https://github.com/Cyber-Security-Team/binary_function_similarity/blob/main/image/fork_server_3.png)
 #### 3、共享内存：
 共享内存的好处：减少内存占用、支持并发访问、避免数据复制。
 在共享内存中，操作系统会将一段物理地址映射到多个进程的虚拟地址空间中，实现了多个进程访问同一片内存区域的功能，每个进程将测试数据加载到自己的虚拟内存中，所以也不会造成进程间的阻塞。AFL使用共享内存，来完成执行过程中的分支信息在fuzzer和target之间的传递。具体地，fuzzer在启动时，会执行setup_shm()方法进行配置。其首先调用shmget()分配一块共享内存，大小MAP_SIZE为64K。，并将返回的变量以环境变量的方式加载到环境中，其他fuzzer可以向forkserver发送命令获取变量以获得共享内存的首地址的指针。在一个进程结束之后覆盖率等信息刷新到物理内存中，所以测试用例都结束之后父进程进行汇总后会将总的覆盖率写到物理内存中，这样减少了重复的修改内存。
