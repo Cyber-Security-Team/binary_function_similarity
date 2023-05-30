@@ -12,5 +12,6 @@
 
 1、使用qemu用户态仿真运行固件
 使用ida修改httpd程序的十六进制表示的汇编指令，使得程序能够继续运行，跳出死循环。
-![image](https://github.com/Cyber-Security-Team/binary_function_similarity/blob/main/image/%E9%97%AE%E9%A2%981.png)![image](https://github.com/Cyber-Security-Team/binary_function_similarity/blob/main/image/%E9%97%AE%E9%A2%982.png)
+![image](https://github.com/Cyber-Security-Team/binary_function_similarity/blob/main/image/%E9%97%AE%E9%A2%981.png)
+![image](https://github.com/Cyber-Security-Team/binary_function_similarity/blob/main/image/%E9%97%AE%E9%A2%982.png)
 2、漏洞利用（未完成）
