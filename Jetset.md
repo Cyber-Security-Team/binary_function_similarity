@@ -6,6 +6,6 @@
     make build_qemu
     make virtualenv
     make build_jetset_engine
-## fuzz部分
+## [fuzz部分](https://github.com/aerosec/jetset_fuzzer/tree/master)
 
 
