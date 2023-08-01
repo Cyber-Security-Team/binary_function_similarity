@@ -10,5 +10,7 @@
 ![jetset仿真结果](https://github.com/Cyber-Security-Team/binary_function_similarity/blob/main/image/jetset%E4%BB%BF%E7%9C%9F%E7%BB%93%E6%9E%9C.png)
 ![image](https://github.com/Cyber-Security-Team/binary_function_similarity/blob/main/image/1.png)
 ## [fuzz部分](https://github.com/aerosec/jetset_fuzzer/tree/master)
-
-
+### docker构建
+![构建docker](https://github.com/Cyber-Security-Team/binary_function_similarity/blob/main/image/%E6%9E%84%E5%BB%BAdocker.png)
+### jetset击中目标位置
+![击中目标](https://github.com/Cyber-Security-Team/binary_function_similarity/blob/main/image/%E7%9B%AE%E6%A0%87%E5%87%BB%E4%B8%AD.png)
