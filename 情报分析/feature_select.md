@@ -19,9 +19,10 @@
 
 7、用户社交关系图：
 
-### 数据集采集
+### 反华数据集采集
 ![iamge](https://github.com/Cyber-Security-Team/binary_function_similarity/blob/main/%E6%83%85%E6%8A%A5%E5%88%86%E6%9E%90/image/%E6%95%B0%E6%8D%AE%E7%A4%BA%E4%BE%8B.png)
 
-遇到的困难：  
-1、反华言论数据集不太好采集，很多反华的言论阴阳怪气，作为人可以识别，但是机器不容易识别。  
-2、推特API需要付费或者申请称为开发者（申请被拒绝），所以采用非API的方式进行采集，特征不一定全，并且github很多方法不可用。  
+### 反华言论识别
+![image](https://github.com/Cyber-Security-Team/binary_function_similarity/blob/main/%E6%83%85%E6%8A%A5%E5%88%86%E6%9E%90/image/%E5%8F%8D%E5%8D%8E72%25.png)
+
+### 微博水军账号识别
