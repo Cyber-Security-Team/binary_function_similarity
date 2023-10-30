@@ -20,7 +20,6 @@
 7、用户社交关系图：
 
 ### 反华数据集采集
-所需特征：
-![image](https://github.com/Cyber-Security-Team/binary_function_similarity/blob/main/%E6%83%85%E6%8A%A5%E5%88%86%E6%9E%90/image/%E6%8E%A8%E7%89%B9%E6%95%B0%E6%8D%AE%E6%89%80%E9%9C%80%E7%89%B9%E5%BE%81.png)
-
+用户所需特征：
+用户名、粉丝（随着时间序列变动）、随着时间序列变动的话题、关注者、发布的帖子内容、回复的内容、喜欢（likes）的内容
 
