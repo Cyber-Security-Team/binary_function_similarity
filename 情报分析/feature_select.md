@@ -20,9 +20,7 @@
 7、用户社交关系图：
 
 ### 反华数据集采集
-![iamge](https://github.com/Cyber-Security-Team/binary_function_similarity/blob/main/%E6%83%85%E6%8A%A5%E5%88%86%E6%9E%90/image/%E6%95%B0%E6%8D%AE%E7%A4%BA%E4%BE%8B.png)
+所需特征：
+![image](https://github.com/Cyber-Security-Team/binary_function_similarity/blob/main/%E6%83%85%E6%8A%A5%E5%88%86%E6%9E%90/image/%E6%8E%A8%E7%89%B9%E6%95%B0%E6%8D%AE%E6%89%80%E9%9C%80%E7%89%B9%E5%BE%81.png)
 
-### 反华言论识别
-![image](https://github.com/Cyber-Security-Team/binary_function_similarity/blob/main/%E6%83%85%E6%8A%A5%E5%88%86%E6%9E%90/image/%E5%8F%8D%E5%8D%8E72%25.png)
 
-### 微博水军账号识别
